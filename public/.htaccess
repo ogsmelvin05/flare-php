@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^flare-php.technocoders.com$
+RewriteRule ^(.*) http://flare-php.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^flare-php.technocoders.com$
+RewriteRule ^robots.txt robots2.txt [L]
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

@@ -1,4 +1,4 @@
 Flare PHP
 ===
 
-Flare PHP is a framework that supports mash ups.
+A Modular PHP Framework. Aims to support API Services and NoSql Technologies.

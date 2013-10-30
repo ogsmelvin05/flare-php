@@ -6,7 +6,7 @@ use Main\Controller;
 
 class Index extends Controller
 {
-    public function index_action()
+    public function index()
     {
         return $this->view('index');
     }

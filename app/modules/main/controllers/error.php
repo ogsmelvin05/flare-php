@@ -3,6 +3,7 @@
 namespace Main\Controllers;
 
 use Flare\Application\ErrorController;
+use Flare\OAuth;
 
 class Error extends ErrorController
 {

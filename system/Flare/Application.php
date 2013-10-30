@@ -475,7 +475,7 @@ class Application
             } else {
                 $route = F::$router->useErrorRoute(F::$config->get('router.errors'));
             }
-            if (!$route || !($route->getController() instanceof ErrorController)) {
+            if (!$route || !($route->getController() instanceof ErrorController) || !$route->getAction()->exists()) {
                 $this->error($code, $message, true);
             }
 

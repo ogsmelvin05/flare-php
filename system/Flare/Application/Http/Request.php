@@ -82,10 +82,10 @@ class Request extends ParentRequest
         if (count($controller) === 2) {
             $this->_submodule = $controller[0];
             $controller[0] = ucwords($controller[0]);
-            $controller[1] = str_replace(' ', '_', ucwords(str_replace('_', ' ', $controller[1]))).'_Controller';
+            $controller[1] = str_replace(' ', '_', ucwords(str_replace('_', ' ', $controller[1])));
             $this->_controllerClassName = $controller[0]."\\".$controller[1];
         } else {
-            $this->_controllerClassName = str_replace(' ', '_', ucwords(str_replace('_', ' ', $this->_controller))).'_Controller';
+            $this->_controllerClassName = str_replace(' ', '_', ucwords(str_replace('_', ' ', $this->_controller)));
         }
         return $this;
     }
@@ -143,6 +143,6 @@ class Request extends ParentRequest
      */
     public function getActionMethodName()
     {
-        return $this->_action.'_action';
+        return $this->_action;
     }
 }

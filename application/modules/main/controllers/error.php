@@ -4,7 +4,7 @@ namespace Main\Controllers;
 
 use Flare\Application\ErrorController;
 
-class Error_Controller extends ErrorController
+class Error extends ErrorController
 {
     public function index_action()
     {

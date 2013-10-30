@@ -13,6 +13,18 @@ class Twitter extends Service
 {
     /**
      * 
+     * @var string
+     */
+    private $consumerKey;
+
+    /**
+     * 
+     * @var string
+     */
+    private $consumerSecret;
+
+    /**
+     * 
      * @param array $config
      * @return void
      */
@@ -29,6 +41,6 @@ class Twitter extends Service
      */
     public function search($query, $options = array())
     {
-
+        
     }
 }

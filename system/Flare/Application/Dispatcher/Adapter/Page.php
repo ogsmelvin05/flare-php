@@ -22,14 +22,7 @@ class Page extends Adapter
         $view = null;
         $this->_controller->init();
         $this->_controller->predispatch();
-        if (method_exists($this->_controller, 'on_request')) {
-            $this->_controller->on_request();
-        } else {
-            $method = 'on_'.strtolower($this->_controller->request->server('request_method'));
-            if (method_exists($this->_controller, $method)) {
-                $this->_controller->{$method}();
-            }
-        }
+        
         if ($this->_controller->router->getRoute()->hasReroute()) {
             $view = call_user_func_array(
                 array($this->_controller, '__reroute'), 

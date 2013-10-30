@@ -267,8 +267,7 @@ abstract class AbstractController
      */
     public function forward($action, $controller = null, array $params = array())
     {
-        $action = $action.'_action';
-        if ($action == '_action' || $action == $this->request->getActionMethodName()) return false;
+        if (!$action || $action == $this->request->getActionMethodName()) return false;
 
         $path = F::getApp()->getModulesDirectory()
             .$this->request->getModule().'/'
@@ -285,10 +284,10 @@ abstract class AbstractController
             $controller = explode('/', $controller, 2);
             if (count($controller) === 2) {
                 $controller[0] = ucwords($controller[0]);
-                $controller[1] = str_replace(' ', '_', ucwords(str_replace('_', ' ', $controller[1]))).'_Controller';
+                $controller[1] = str_replace(' ', '_', ucwords(str_replace('_', ' ', $controller[1])));
                 $class .= $controller[0]."\\".$controller[1];
             } else {
-                $class .= str_replace(' ', '_', ucwords(str_replace('_', ' ', $controller[0]))).'_Controller';
+                $class .= str_replace(' ', '_', ucwords(str_replace('_', ' ', $controller[0])));
             }
         }
 

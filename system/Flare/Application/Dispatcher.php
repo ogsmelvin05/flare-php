@@ -2,7 +2,7 @@
 
 namespace Flare\Application;
 
-use Flare\Application\AbstractController;
+use Flare\Application\BaseController;
 
 /**
  * 
@@ -13,10 +13,10 @@ class Dispatcher
 {
     /**
      * 
-     * @param \Flare\Application\AbstractController $controller
+     * @param \Flare\Application\BaseController $controller
      * @param string $adapter
      */
-    public function __construct(AbstractController &$controller, $adapter = 'page')
+    public function __construct(BaseController &$controller, $adapter = 'page')
     {
         $adapter = __CLASS__."\\Adapter\\".ucwords(strtolower($adapter));
         if ($controller->config->get('autoload.database')) {

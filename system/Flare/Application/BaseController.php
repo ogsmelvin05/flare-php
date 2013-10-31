@@ -16,7 +16,7 @@ use Flare\Http\File;
  * @author anthony
  * 
  */
-abstract class AbstractController
+abstract class BaseController
 {
     /**
      * 
@@ -80,7 +80,7 @@ abstract class AbstractController
 
     /**
      * 
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function disableCache()
     {
@@ -115,7 +115,7 @@ abstract class AbstractController
     /**
      * 
      * @param string $key
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function setDatabase($key = 'default')
     {
@@ -142,7 +142,7 @@ abstract class AbstractController
     /**
      * 
      * @param string $helper
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function setHelper($helper)
     {
@@ -158,7 +158,7 @@ abstract class AbstractController
     /**
      * 
      * @param boolean $switch
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function autoLayout($switch)
     {
@@ -336,7 +336,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     private function _requireMethod($response)
     {
@@ -351,7 +351,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function requirePostMethod($response = 404)
     {
@@ -364,7 +364,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function requireGetMethod($response = 404)
     {
@@ -377,7 +377,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function requirePutMethod($response = 404)
     {
@@ -390,7 +390,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function requireDeleteMethod($response = 404)
     {
@@ -403,7 +403,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function requireAjax($response = 404)
     {
@@ -416,7 +416,7 @@ abstract class AbstractController
     /**
      * 
      * @param int|callback $response
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function requireHttps($response = 404)
     {
@@ -429,7 +429,7 @@ abstract class AbstractController
     /**
      * 
      * @param int $redirectCode
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function forceHttps($redirectCode = 301)
     {

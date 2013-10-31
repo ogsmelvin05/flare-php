@@ -65,9 +65,18 @@ class Data
      * 
      * @return \Flare\Object\Json
      */
-    public function toJSON()
+    public function toJSONObject()
     {
         return new Json($this->data);
+    }
+
+    /**
+     * 
+     * @return string
+     */
+    public function toJSON()
+    {
+        return json_encode($this->data);
     }
 
     /**

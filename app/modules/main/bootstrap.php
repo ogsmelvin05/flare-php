@@ -2,9 +2,9 @@
 
 namespace Main;
 
-use Flare\Application\AbstractController;
+use Flare\Application\BaseController;
 
-class Controller extends AbstractController
+class Controller extends BaseController
 {
     public function init()
     {

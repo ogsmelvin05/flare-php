@@ -3,7 +3,7 @@
 namespace Flare\Application\Router;
 
 use Flare\Application\Router\Route\Action;
-use Flare\Application\AbstractController;
+use Flare\Application\BaseController;
 use Flare\Security\Xss;
 use Flare\Security\Uri;
 
@@ -16,7 +16,7 @@ class Route
 {
     /**
      * 
-     * @var \Flare\Application\AbstractController
+     * @var \Flare\Application\BaseController
      */
     private $_controller;
 
@@ -46,7 +46,7 @@ class Route
 
     /**
      * 
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function getController()
     {
@@ -55,10 +55,10 @@ class Route
 
     /**
      * 
-     * @param \Flare\Application\AbstractController
+     * @param \Flare\Application\BaseController
      * @return \Flare\Application\Router\Route
      */
-    public function setController(AbstractController $controller)
+    public function setController(BaseController $controller)
     {
         $this->_controller = $controller;
         $this->_hasReroute = method_exists($controller, '__reroute');

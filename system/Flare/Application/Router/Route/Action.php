@@ -2,7 +2,7 @@
 
 namespace Flare\Application\Router\Route;
 
-use Flare\Application\AbstractController;
+use Flare\Application\BaseController;
 use ReflectionException;
 use ReflectionMethod;
 
@@ -21,10 +21,10 @@ class Action extends ReflectionMethod
 
     /**
      * 
-     * @param \Flare\Application\AbstractController $controller
+     * @param \Flare\Application\BaseController $controller
      * @param string $actionMethodName
      */
-    public function __construct(AbstractController $controller, $actionMethodName)
+    public function __construct(BaseController $controller, $actionMethodName)
     {
         try {
             parent::__construct($controller, $actionMethodName);

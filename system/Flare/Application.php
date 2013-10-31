@@ -83,7 +83,7 @@ class Application
 
     /**
      * 
-     * @var \Flare\Application\AbstractController
+     * @var \Flare\Application\BaseController
      */
     private $_controller;
 
@@ -506,7 +506,7 @@ class Application
 
     /**
      * 
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     public function getController()
     {

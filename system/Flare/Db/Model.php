@@ -13,7 +13,7 @@ abstract class Model
 {
     /**
      * 
-     * @return \Flare\Application\AbstractController
+     * @return \Flare\Application\BaseController
      */
     protected static function _getController()
     {

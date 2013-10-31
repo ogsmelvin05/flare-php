@@ -2,14 +2,14 @@
 
 namespace Flare\Application;
 
-use Flare\Application\AbstractController;
+use Flare\Application\BaseController;
 
 /**
  * 
  * @author anthony
  * 
  */
-abstract class ErrorController extends AbstractController
+abstract class ErrorController extends BaseController
 {
     /**
      *

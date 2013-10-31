@@ -2,7 +2,7 @@
 
 namespace Flare\Application\Dispatcher;
 
-use Flare\Application\AbstractController;
+use Flare\Application\BaseController;
 
 /**
  * 
@@ -13,21 +13,15 @@ abstract class Adapter
 {
     /**
      * 
-     * @var string
-     */
-    const FLARE_JS_HEADER = 'X-Flare-JS';
-
-    /**
-     * 
-     * @var \Flare\Application\AbstractController
+     * @var \Flare\Application\BaseController
      */
     protected $_controller;
 
     /**
      * 
-     * @param \Flare\Application\AbstractController $controller
+     * @param \Flare\Application\BaseController $controller
      */
-    public function __construct(AbstractController &$controller)
+    public function __construct(BaseController &$controller)
     {
         $this->_controller = & $controller;
     }

@@ -176,13 +176,13 @@ abstract class Adapter
                 $action = $class[3] ? $class[3] : F::$config->get('router.default_action');
             }
         } elseif ($count == 2) {
-            $module = F::$config->get('router.default_module');
+            $module = F::$request->getModule();
             $controller = $class[0];
             $action = $class[1];
         } elseif ($count == 1) {
-            $module = F::$config->get('router.default_module');
-            $controller = F::$config->get('router.default_controller');
-            $action = $class[0];
+            $module = F::$request->getModule();
+            $controller = $class[0];
+            $action = F::$config->get('router.default_action');
         }
         unset($count, $class);
         return $this->_route($module, $controller, $action);

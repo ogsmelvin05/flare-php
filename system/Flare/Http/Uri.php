@@ -82,7 +82,7 @@ class Uri
      * 
      * @var string
      */
-    private $submodule;
+    private $submodule = '';
 
     /**
      * 
